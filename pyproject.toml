@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ftqc"
+version = "0.1.0"
+description = "Surface-code resource estimation for fault-tolerant quantum computing"
+readme = "README.md"
+requires-python = ">=3.9"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+keywords = ["quantum", "fault-tolerance", "surface-code", "resource-estimation"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "Intended Audience :: Science/Research",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3 :: Only",
+  "Topic :: Scientific/Engineering :: Physics",
+  "Typing :: Typed",
+]
+
+[project.urls]
+Homepage = "https://github.com/ftqc/ftqc"
+Repository = "https://github.com/ftqc/ftqc"
+Issues = "https://github.com/ftqc/ftqc/issues"
+
+[project.scripts]
+ftqc = "ftqc.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+ftqc = ["py.typed"]
